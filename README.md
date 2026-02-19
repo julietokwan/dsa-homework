@@ -1,87 +1,69 @@
-# Sorting Algorithms Comparison – Homework Assignment
+Week 3 – Product Inventory System (Java)
+Overview
+This project was completed for my Week 3 Data Structures & Algorithms assignment.
+The goal was to design a simple inventory management system using Object‑Oriented Programming and Java Collections.
+The project demonstrates:
+- Class design and interaction
+- Use of Vector<Product> to store objects
+- Searching, adding, removing, and printing data
+- Writing a tester class to verify functionality
+  Project Structure
+1. Product.java
+   Represents a single product with:
+- name
+- price
+- quantity
+  Includes:
+- Constructor
+- Getters & setters
+- toString() for clean output formatting
+2. ProductInventory.java
+   Manages a collection of Product objects using a Vector.
+   Methods implemented:
+- addProduct(Product product)
+- removeProduct(String name)
+- findProduct(String name)
+- printInventory()
+  This class handles all inventory operations.
 
-This project implements three classic sorting algorithms in Java:
-- Insertion Sort
-- Selection Sort
-- Bubble Sort
+3. InventoryTester.java
+   Contains the main method used to test the system.
+   The tester:
+- Creates a ProductInventory
+- Adds sample products
+- Prints the inventory
+- Searches for a product
+- Removes a product
+- Prints the updated inventory
 
-The goal is to compare their performance by counting the number of **comparisons** and **swaps** for three types of input:
-1. Increasing (already sorted)
-2. Reverse (worst case)
-3. Random (average case)
+Sample Output
+Running the tester produces:
+Current Inventory:
+Apple - $1.25 (10 in stock)
+Banana - $0.75 (20 in stock)
+Milk - $4.5 (5 in stock)
 
----
+Searching for 'Milk':
+Found: Milk - $4.5 (5 in stock)
 
-## How the Program Works
+Removing 'Banana'...
+Removed? true
 
-The program:
-- Creates three arrays (increasing, reverse, random)
-- Runs all three sorting algorithms on each array
-- Tracks the number of comparisons and swaps using global counters
-- Prints the results to the console
+Updated Inventory:
+Apple - $1.25 (10 in stock)
+Milk - $4.5 (5 in stock)
+How to Run
+- Open the project in IntelliJ IDEA
+- Navigate to InventoryTester.java
+- Click the green Run button next to the main method
+- View the output in the console
 
-Each algorithm uses the same input size (10 elements) for a fair comparison.
+Reflection
+This assignment helped me strengthen my understanding of:
+- How classes interact in Java
+- How to manage objects using collections
+- How to design methods that work together to form a complete system
+- How to test functionality using a dedicated tester class
+  It also improved my confidence in writing clean, organized code.
 
----
 
-## Results
-
-### **Increasing Input**
-| Algorithm       | Comparisons | Swaps |
-|-----------------|-------------|-------|
-| Insertion Sort  | 9           | 0     |
-| Selection Sort  | 45          | 0     |
-| Bubble Sort     | 9           | 0     |
-
-### **Reverse Input**
-| Algorithm       | Comparisons | Swaps |
-|-----------------|-------------|-------|
-| Insertion Sort  | 45          | 45    |
-| Selection Sort  | 45          | 5     |
-| Bubble Sort     | 45          | 45    |
-
-### **Random Input**
-| Algorithm       | Comparisons | Swaps |
-|-----------------|-------------|-------|
-| Insertion Sort  | 33          | 26    |
-| Selection Sort  | 45          | 6     |
-| Bubble Sort     | 45          | 26    |
-
----
-
-## Analysis
-
-### **Insertion Sort**
-- Best case: very fast on sorted data (only 9 comparisons, 0 swaps)
-- Worst case: slow on reverse data (45 comparisons, 45 swaps)
-- Average case: moderate performance  
-  Insertion Sort adapts to the input — it stops early when the array is already sorted.
-
-### **Selection Sort**
-- Always performs the same number of comparisons (45), no matter the input
-- Swaps only when needed (at most 1 per pass)
-- Not adaptive  
-  Selection Sort is predictable but not efficient on large data.
-
-### **Bubble Sort**
-- Best case: stops early when sorted (9 comparisons)
-- Worst case: very slow on reverse data (45 comparisons, 45 swaps)
-- Average case: similar to Insertion Sort but usually slower  
-  Bubble Sort benefits from early stopping but still performs many swaps.
-
----
-
-## How to Run the Program
-
-1. Open the project in IntelliJ IDEA
-2. Navigate to `SortingHomework.java`
-3. Right‑click inside the file
-4. Select **Run 'SortingHomework.main()'**
-5. View the results in the console
-
----
-
-## Author
-Juliet Okwan  
-CISC 3130 – Data Structures  
-Brooklyn Colleges
