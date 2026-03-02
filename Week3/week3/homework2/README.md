@@ -62,6 +62,3 @@ How to Run
 - Run the main() method
 - The console will show the different reports and sample outputs
 
-Notes
-This folder contains all the required files for Homework 2 (Week 3).
-Everything is organized inside the week3.homework2 package, including this README.
